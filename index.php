@@ -8,19 +8,32 @@
 </head>
 
 <body>
-    <form action="processar.php" method="post">
-    <table>
-        <tr>
-            <th>Item</th>
-            <th>Quantidade</th>
-        </tr>
-        <tr>
-            <td>Pneu</td>
-            <td><input type="number" name="pneu" id="pneu"></td>
-        </tr>
-    </table>
-
-    </form>
+    <h1>Oficina O Marcelo</h1>
+    <hr>
+    <fieldset>
+        <form action="processar.php" method="post">
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Quantidade</th>
+            </tr>
+            <tr>
+                <td>Pneu</td>
+                <td><input type="number" name="pneu" id="pneu"></td>
+            </tr>
+            <tr>
+                <td>Oleo</td>
+                <td><input type="number" name="oleo" id="oleo"></td>
+            </tr>
+            <tr>
+                <td>Velas</td>
+                <td><input type="number" name="velas" id="velas"></td>
+            </tr>
+        </table>
+        <input type="submit" value="enviar">
+    
+        </form>
+    </fieldset>
 </body>
 
 </html>
