@@ -16,12 +16,12 @@
         <?php
         $pneu = $_POST['pneu'];
         $oleo = $_POST['oleo'];
-        $vela = $_POST['vela'];
+        $velas = $_POST['velas'];
         setlocale(LC_ALL, "pt-BR");
 
-        echo $pneu .'pneus <br>';
-        echo $oleo .'óleo <br>';
-        echo $vela .'vela <br>';
+        echo $pneu .' pneus <br>';
+        echo $oleo .' óleo <br>';
+        echo $velas .' vela <br>';
         echo '<p>Pedido processado em: ';
         echo strftime("%d de %B de %G as %H:%M");
         '</p>';
