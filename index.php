@@ -11,6 +11,7 @@
     <h1>Oficina O Marcelo</h1>
     <hr>
     <fieldset>
+        <legend>Faça seu orçamento!!!!</legend>
         <form action="processar.php" method="post">
         <table>
             <tr>
@@ -22,7 +23,7 @@
                 <td><input type="number" name="pneu" id="pneu"></td>
             </tr>
             <tr>
-                <td>Oleo</td>
+                <td>Óleo</td>
                 <td><input type="number" name="oleo" id="oleo"></td>
             </tr>
             <tr>
