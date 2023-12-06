@@ -8,10 +8,19 @@
 </head>
 
 <body>
-    <?php
-    phpinfo();
+    <form action="processar.php" method="post">
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Quantidade</th>
+        </tr>
+        <tr>
+            <td>Pneu</td>
+            <td><input type="number" name="pneu" id="pneu"></td>
+        </tr>
+    </table>
 
-    ?>
+    </form>
 </body>
 
 </html>
