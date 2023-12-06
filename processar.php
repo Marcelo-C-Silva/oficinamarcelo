@@ -14,8 +14,18 @@
     <fieldset>
         <legend>Seus Pedidos!!!</legend>
         <?php
-        echo '<p>Pedido processado!!!!!</p>';
-            ?>
+        $pneu = $_POST['pneu'];
+        $oleo = $_POST['oleo'];
+        $vela = $_POST['vela'];
+        setlocale(LC_ALL, "pt-BR");
+
+        echo $pneu .'pneus <br>';
+        echo $oleo .'óleo <br>';
+        echo $vela .'vela <br>';
+        echo '<p>Pedido processado em: ';
+        echo strftime("%d de %B de %G as %H:%M");
+        '</p>';
+        ?>
     </fieldset>
 </body>
 
