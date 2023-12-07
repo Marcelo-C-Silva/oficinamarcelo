@@ -14,17 +14,30 @@
     <fieldset>
         <legend>Seus Pedidos!!!</legend>
         <?php
+        setlocale(LC_ALL, "pt-BR");
+        $valortotal = 0.00;
+        $qtdtotal = 0;
+        define('PRECOPNEU', 100);
+        define('PRECOOLEO', 10);
+        define('PRECOVELAS', 4);
         $pneu = $_POST['pneu'];
         $oleo = $_POST['oleo'];
         $velas = $_POST['velas'];
-        setlocale(LC_ALL, "pt-BR");
 
-        echo $pneu .' pneus <br>';
-        echo $oleo .' óleo <br>';
-        echo $velas .' vela <br>';
+        echo $pneu .' pneus. <br>';
+        echo $oleo .' óleo. <br>';
+        echo $velas .' vela. <br>';
+        
+        $valortotal = $pneu*PRECOPNEU + $oleo*PRECOOLEO + $velas*PRECOVELAS;
+
+        $qtdtotal = $pneu + $oleo + $velas;
+        echo 'A quantidade total é: ' .$qtdtotal.'. <br>';
+        echo ('O valor total é: ' . number_format($valortotal ,2,",",".")  .'.');
+        echo '<hr>';
         echo '<p>Pedido processado em: ';
-        echo strftime("%d de %B de %G as %H:%M");
+        echo strftime("%d de %B de %G as %H:%M").'.';
         '</p>';
+
         ?>
     </fieldset>
 </body>
