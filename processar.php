@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oficina O Marcelo</title>
+    <title>Oficina O Marcelo - Pedidos</title>
 </head>
 
 <body>
@@ -20,24 +19,33 @@
         define('PRECOPNEU', 100);
         define('PRECOOLEO', 10);
         define('PRECOVELAS', 4);
-        $pneu = $_POST['pneu'];
-        $oleo = $_POST['oleo'];
-        $velas = $_POST['velas'];
-
-        echo $pneu .' pneus. <br>';
-        echo $oleo .' óleo. <br>';
-        echo $velas .' vela. <br>';
-        
-        $valortotal = $pneu*PRECOPNEU + $oleo*PRECOOLEO + $velas*PRECOVELAS;
+        $pneu = isset($_POST['pneu']) ? $_POST['pneu'] : 0;
+        $oleo = isset($_POST['oleo']) ? $_POST['oleo'] : 0;
+        $velas = isset($_POST['velas']) ? $_POST['velas'] : 0;
 
         $qtdtotal = $pneu + $oleo + $velas;
+        if ($qtdtotal == 0 ) {
+            echo 'Você não pediu nada na página anterior. <br>';
+        } else {
+            echo $pneu . ' pneu. <br>';
+            echo $oleo . ' óleo. <br>';
+            echo $velas . ' vela. <br>';
+        }
+
+        $valortotal = $pneu * PRECOPNEU + $oleo * PRECOOLEO + $velas * PRECOVELAS;
+
+        echo 'A quantidade total é: ' . $qtdtotal . '. <br>';
+        echo 'O subtotal total é de R$ ' . number_format($valortotal, 2, ",", ".") . '. <br>';
         $taxa = 0.22;
-        $valortotal= $valortotal * (1 + $taxa);
-        echo 'A quantidade total é: ' .$qtdtotal.'. <br>';
-        echo ('O valor total é: ' . number_format($valortotal ,2,",",".")  .'.');
+        if (is_numeric($valortotal)) {
+            $valortotal = $valortotal * (1 + $taxa);
+            echo 'O valor total é de R$ ' . number_format($valortotal, 2, ',', '.') . '.';
+        } else {
+            echo 'Não foi possível calcular o valor total.';
+        }
         echo '<hr>';
         echo '<p>Pedido processado em: ';
-        echo strftime("%d de %B de %G as %H:%M").'.';
+        echo strftime("%d de %B de %G as %H:%M") . '.';
         '</p>';
 
         ?>

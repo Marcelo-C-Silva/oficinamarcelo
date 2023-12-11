@@ -20,15 +20,15 @@
             </tr>
             <tr>
                 <td>Pneu</td>
-                <td><input type="number" name="pneu" id="pneu"></td>
+                <td><input type="number" name="pneu" id="pneu" min="0" value="0"></td>
             </tr>
             <tr>
                 <td>Óleo</td>
-                <td><input type="number" name="oleo" id="oleo"></td>
+                <td><input type="number" name="oleo" id="oleo" min="0" value="0" ></td>
             </tr>
             <tr>
                 <td>Velas</td>
-                <td><input type="number" name="velas" id="velas"></td>
+                <td><input type="number" name="velas" id="velas" min="0" value="0" ></td>
             </tr>
         </table>
         <input type="submit" value="enviar">
