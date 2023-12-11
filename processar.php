@@ -31,6 +31,8 @@
         $valortotal = $pneu*PRECOPNEU + $oleo*PRECOOLEO + $velas*PRECOVELAS;
 
         $qtdtotal = $pneu + $oleo + $velas;
+        $taxa = 0.22;
+        $valortotal= $valortotal * (1 + $taxa);
         echo 'A quantidade total é: ' .$qtdtotal.'. <br>';
         echo ('O valor total é: ' . number_format($valortotal ,2,",",".")  .'.');
         echo '<hr>';
